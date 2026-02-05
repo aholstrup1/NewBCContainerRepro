@@ -59,7 +59,7 @@ jobs:
 
       - name: Determine Deployment Environments
         id: DetermineDeploymentEnvironments
-        uses: microsoft/AL-Go-Actions/DetermineDeploymentEnvironments@v8.1
+        uses: microsoft/AL-Go/Actions/DetermineDeploymentEnvironments@aholstrup/deploymentenvironment
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:
@@ -164,6 +164,7 @@ jobs:
           shell: ${{ matrix.shell }}
           artifactsVersion: ${{ github.event.inputs.appVersion }}
           artifactsFolder: '.artifacts'
+          buildMode: ${{ matrix.buildMode }}
 
       - name: Deploy to Business Central
         id: Deploy
