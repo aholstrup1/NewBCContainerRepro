@@ -159,7 +159,7 @@ jobs:
           getSecrets: '${{ steps.envName.outputs.envName }}-AuthContext,${{ steps.envName.outputs.envName }}_AuthContext,AuthContext'
 
       - name: Get Artifacts for deployment
-        uses: microsoft/AL-Go-Actions/GetArtifactsForDeployment@v8.1
+        uses: microsoft/AL-Go/Actions/GetArtifactsForDeployment@aholstrup/deploymentenvironment
         with:
           shell: ${{ matrix.shell }}
           artifactsVersion: ${{ github.event.inputs.appVersion }}
