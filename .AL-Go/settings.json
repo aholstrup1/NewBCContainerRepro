@@ -5,6 +5,7 @@
   "testFolders": [],
   "bcptTestFolders": [],
   "buildModes": [ "CLOUD", "ONPREM" ],
+  "environments": [ "TestEnv" ],
   "DeployToTestEnv": {
     "EnvironmentType": "SaaS",
     "EnvironmentName": "TestEnv",
